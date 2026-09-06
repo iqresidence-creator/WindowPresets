@@ -1,0 +1,221 @@
+WINDOWPRESETS 0.6.0 — WINDOWS WORKSPACE MANAGER
+================================================================
+Author: NickMoor, 2026. Run: WindowPresets.exe (portable,
+everything is stored next to the exe)
+
+
+--- WHAT THE PROGRAM DOES ----------------------------------------
+
+Saves a snapshot of your workspace: windows (positions,
+monitors), running programs, Explorer folders (with Win11
+tabs). Restores the workspace with a single button.
+
+--- KEYS ----------------------------------------------------------
+
+- SPACE (hold it, cursor over the preview screenshot) —
+  full-screen preview;
+- Ctrl + "Load" — full restore;
+- Ctrl + click on the preset trash button — delete all presets;
+- Ctrl + click on the tab trash button — delete all tabs;
+- Ctrl/Shift + click in the list — multi-select;
+- Esc — close the quick search window.
+
+
+--- MAIN WINDOW ---------------------------------------------------
+
+The preset list is grouped: "1 monitor" / "Multiple monitors"
+(by the number of monitors AT THE MOMENT the preset was saved).
+
+Buttons under the list:
+- "+" New preset — capture the current workspace;
+- the program icon — Load, apply the selected preset;
+- "↻" Update — rescan windows and refresh the preset;
+- "✕" Close — close the preset's windows/folders (the program
+  itself stays running);
+- "🗑" Delete preset (with confirmation); Ctrl+click on the
+  trash — delete ALL presets (with an extra confirmation);
+- "⚙" Settings (bottom right).
+
+
+--- PRESET ACTIONS (right click) ----------------------------------
+
+- Load — apply the preset;
+- Configure — a composition window: tick the unneeded programs
+  and folders -> "Delete selected" (the preset is updated
+  without rescanning);
+- Duplicate — a copy named "X (copy)" right after the original;
+- Close preset windows;
+- Update from current windows — rescan;
+- Rename (or double-click the row);
+- Delete (with confirmation);
+- Tag (tab)... — tick the preset's filter tabs;
+- Color — the preset's own background color (palette / any /
+  default);
+- Add separator — a header row under this preset (on an empty
+  spot of the list — at the end).
+
+Preset order — drag and drop with the mouse.
+
+
+--- LOADING PRESETS -----------------------------------------------
+
+- A plain "Load" click (the program icon) — the preset's
+  windows on top of the current ones;
+- Ctrl+click — full restore: close the extra windows that are
+  not in the preset;
+- several selected presets load ONE BY ONE (the "Loading..."
+  overlay shows progress N/M);
+- loading does not freeze the program window.
+
+
+--- MULTI-SELECT --------------------------------------------------
+
+Ctrl+click — add/remove, Shift+click — range.
+For all selected at once: load, delete, tags, color, dragging.
+A right click on a selected row keeps the selection; on an
+unselected one — selects only it.
+
+
+--- SEPARATORS ----------------------------------------------------
+
+Header rows for cataloguing: right click -> "Add separator"
+(immediately asks for a name). They load nothing and have no
+preview. They can be colored, dragged, duplicated, renamed,
+deleted. They are local to the tab where they were created
+(in "All" — visible only in "All"). The separator text is
+centered horizontally.
+
+
+--- FILTER TABS ---------------------------------------------------
+
+The tabs at the top are tag filters; "All" shows everything.
+Buttons to the right of the tabs:
+- icons "+" create, "⧉" duplicate (with presets), "⌶" rename,
+  "🗑" delete (Ctrl+click — ALL tabs).
+
+Dragging — tab order. Mouse wheel over the tabs — scrolling.
+Double-click a tab — rename it. Right click on a tab:
+duplicate / rename / delete / Color (plate background).
+
+Click on the current tab plate (above the list) — a popup with
+all tabs: left click — switch, right click — menu, dragging —
+order; closing — click outside.
+
+Double-click "All" — QUICK SEARCH (see below).
+
+
+--- QUICK PRESET SEARCH -------------------------------------------
+
+Double-click the "All" tab: a window with all presets and a
+search field. Type — filter; Enter / click — pick: the list
+scrolls to the preset and selects it (if it is hidden by the
+tab filter, the program switches the tab). The window grows
+with the count, then in columns (column width = the program
+window); when it hits the monitor edge — the mouse wheel pages
+through. Closing: cursor outside, Esc, pick. Cells show the
+preset color and tab stripes.
+
+
+--- PREVIEW -------------------------------------------------------
+
+Hovering the cursor over a preset row opens a small preview
+next to the list: a screenshot + composition (programs with
+icons, folders, summary). For a preset in the lower half of
+the list the text is on top and the screenshot below. Long
+composition scrolls.
+
+Expand to full screen:
+- hover the cursor over the small preview's SCREENSHOT and
+  hold;
+- or press and hold SPACE.
+
+While any menu/window of the program is open — the preview
+does not expand.
+
+
+--- SETTINGS ------------------------------------------------------
+
+"Language / Language" section:
+- Русский / English — the interface language; the change is
+  applied immediately, the settings window reopens in the
+  chosen language. Preset, tab and separator names are your
+  data and are never translated.
+
+"Autostart" section:
+- Run at system startup — autostart via the registry.
+
+"Main window" section:
+- Use system color — colors follow the Windows theme
+  (dark/light); the brightness sliders have no effect then;
+- Always on top — the window above the others (the loading
+  overlay is always on top regardless of the checkbox);
+- Main window brightness / Preset list brightness (0–255);
+- Preset color opacity (0–100%) — density of the colored
+  backgrounds of presets and separators;
+- Tab buttons as icons (otherwise text).
+
+"Icons" section (one icon pack for the whole program, it
+cannot be configured):
+- Icon brightness (0–100%);
+- Icon size (5–200%).
+Both settings apply at once to the bottom preset buttons and
+to the tab buttons at the top; tab icons are 70% of the
+bottom ones.
+
+"Preview" section:
+- Show preview;
+- Info panel text size; Info panel opacity;
+- ("Preview size" and "Dimming" have no effect yet.)
+
+"Behavior" section:
+- Minimize to tray (the cross hides to tray instead of
+  closing);
+- Remember window positions.
+
+"Program launch paths" section:
+- manual paths/commands for preset programs (for example,
+  launching in a sandbox: "SandMan.exe" /box:DefaultBox
+  "program.exe").
+
+"Program exclusions" section:
+- programs and folders NOT to save into presets (picked from
+  open windows with icons, or entered manually).
+
+At the bottom of the settings: "Check for updates" and the
+author's block.
+
+Easter egg: at the very bottom of the settings —
+"Kowabunga!"
+
+
+--- UPDATES FROM GITHUB -------------------------------------------
+
+The "Check for updates" button compares the version with the
+latest GitHub release; if there is one — downloads it and
+replaces the exe (the program closes and restarts as the new
+version). Requires internet.
+
+
+--- TRAY AND WINDOW -----------------------------------------------
+
+- A second launch does not create a copy — it raises the open
+  window;
+- tray icon: left click — show, right click — Show / Settings
+  / Quit;
+- the cross: minimize to tray (the "Behavior" checkbox) or
+  close;
+- any window/menu of the program always fits entirely within
+  the monitor;
+- diagnostic log: logs/app.log next to the exe.
+
+
+--- DATA ----------------------------------------------------------
+
+Next to the exe (or the script): presets.json — presets;
+config.json — settings; previews/ — screenshots; logs/ —
+logs. Copy the whole folder to move the program. Manual
+editing — at your own risk.
+
+
+================================================================
+WindowPresets 0.6.0, 2026. NickMoor. THANK YOU!

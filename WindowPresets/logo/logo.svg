@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Градиент для стрелки: зелёный → бирюзовый -->
+    <linearGradient id="arrowGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#39ff14"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="500" height="500" fill="#3a3a3c"/>
+
+  <!-- Три перекрывающиеся квадратные рамки (сверху вниз: дальняя → ближняя) -->
+  <!-- Рамка 1 — задняя (смещена вверх-влево) -->
+  <rect x="123" y="87" width="240" height="240" rx="8" ry="8"
+        fill="none" stroke="#ffffff" stroke-width="20" opacity="0.6"/>
+
+  <!-- Рамка 2 — средняя -->
+  <rect x="163" y="127" width="240" height="240" rx="8" ry="8"
+        fill="none" stroke="#ffffff" stroke-width="20" opacity="0.8"/>
+
+  <!-- Рамка 3 — передняя -->
+  <rect x="203" y="167" width="240" height="240" rx="8" ry="8"
+        fill="none" stroke="#ffffff" stroke-width="20"/>
+
+  <!-- Стрелка, направленная влево -->
+  <g>
+    <!-- Основная часть стрелки (хвост) -->
+    <rect x="243" y="237" width="180" height="126" rx="6" ry="6"
+          fill="url(#arrowGrad)"/>
+    <!-- Наконечник стрелки -->
+    <polygon points="243,237 243,363 153,300"
+             fill="url(#arrowGrad)"/>
+  </g>
+</svg>
